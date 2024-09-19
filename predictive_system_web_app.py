@@ -8,7 +8,7 @@ import pandas as pd
 
 ### Loading the saved model
 
-loaded_model = pickle.load(open('E:\Ezekiel/Model_Deployment/trained_model.sav', 'rb'))
+loaded_model = pickle.load(open('E:/Ezekiel/Model_Deployment/trained_model.sav', 'rb'))
 
 # creating a function
 
