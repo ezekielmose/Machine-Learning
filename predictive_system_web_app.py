@@ -8,7 +8,9 @@ import pandas as pd
 
 ### Loading the saved model
 
-loaded_model = pickle.load(open('E:/Ezekiel/Model_Deployment/trained_model.sav', 'rb'))
+url = "https://github.com/ezekielmose/Machine-Learning/blob/main/trained_model.sav"
+
+loaded_model = pickle.load(open(url))
 
 # creating a function
 
