@@ -67,9 +67,9 @@ def main():
     Blood_Pressure= st.text_input("The Blood Pressure(mm Hg)level (94-200) ")
     cholestoral = st.text_input("Cholestoral Level (mg/dl) (131 -290)")
     Fasting_Blood_Sugar = st.text_input("Patient's Fasting Blood Sugar (0,1)")
-    electrocardiographic = st.text_input("Electrocardiographic level (0, 1 or 2)")
+    resting_electrocardiographic = st.text_input("Electrocardiographic level (0, 1 or 2)")
     Maximum_Heart_Rate= st.text_input("Maximum Heart Rate (99 - 162)")
-    Excersize_Includes = st.text_input("Enter the Patient's Age")
+    Excersize_Includes = st.text_input("Enter the Patient's Excersize_Includes")
     ST_Depression = st.text_input("Patient's ST Depression [ECG or EKG] (0.0 - 4.4)")
     Slope_of_Excersize	 = st.text_input("Patient's Slope of Excersize (0,1 or 2)")
     Number_of_vessels = st.text_input("Number of vessels (0, 1,2,3 or 4)")
@@ -84,7 +84,7 @@ def main():
     Blood_Pressure = pd.to_numeric(Blood_Pressure, errors='coerce')
     cholestoral = pd.to_numeric(cholestoral, errors='coerce')
     Fasting_Blood_Sugar = pd.to_numeric(Fasting_Blood_Sugar, errors='coerce')
-    electrocardiographic = pd.to_numeric(electrocardiographic, errors='coerce')
+    resting_electrocardiographic = pd.to_numeric(resting_electrocardiographic, errors='coerce')
     Maximum_Heart_Rate = pd.to_numeric(Maximum_Heart_Rate, errors='coerce')
     Excersize_Includes = pd.to_numeric(Excersize_Includes, errors='coerce')
     ST_Depression = pd.to_numeric(ST_Depression, errors='coerce')
@@ -97,7 +97,7 @@ def main():
     
     # creating  a prediction button
     if st.button("PREDICT"):
-        diagnosis = hearth_disease_prediction([age,sex,Chest_Pain,Blood_Pressure,cholestoral,Fasting_Blood_Sugar, electrocardiographic,Maximum_Heart_Rate,Excersize_Includes,ST_Depression,Slope_of_Excersize,Number_of_vessels,Thalassemia])
+        diagnosis = hearth_disease_prediction([age,sex,Chest_Pain,Blood_Pressure,cholestoral,Fasting_Blood_Sugar, resting_electrocardiographic,Maximum_Heart_Rate,Excersize_Includes,ST_Depression,Slope_of_Excersize,Number_of_vessels,Thalassemia])
     st.success(diagnosis)
     
  
