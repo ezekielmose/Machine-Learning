@@ -58,14 +58,23 @@ def hearth_disease_prediction(input_data):
 def main():
     
     # Interface title
-    st.title(" Heart Disease Prediction ")
+    st.title("Heart Disease Prediction Machine Learning Model ")
     
     #getting the input data from the user  
-    age = st.text_input("Enter the Patient's Age")
-    sex = st.text_input("Enter the Patient's Gender")
-    Chest_Pain = st.text_input("Chest_Pain level")
-    Blood_Pressure= st.text_input("Enter the Patient's Blood_Pressure(mm Hg) level")
-
+    age = st.text_input("Enter the Patient's Age 15 - 80")
+    sex = st.text_input("Enter the Patient's Gender (0 [F] or 1[M])")
+    Chest_Pain = st.text_input("Chest Pain level (0,1,2 or 3)")
+    Blood_Pressure= st.text_input("The Blood Pressure(mm Hg)level (94-200) ")
+    cholestoral = st.text_input("Cholestoral Level (mg/dl) (131 -290)")
+    Fasting_Blood_Sugar = st.text_input("Patient's Fasting Blood Sugar (0,1)")
+    electrocardiographic = st.text_input("Electrocardiographic level (0, 1 or 2)")
+    Maximum_Heart_Rate= st.text_input("Maximum Heart Rate (99 - 162)")
+    Excersize_Includes = st.text_input("Enter the Patient's Age")
+    ST_Depression = st.text_input("Patient's ST Depression [ECG or EKG] (0.0 - 4.4)")
+    Slope_of_Excersize	 = st.text_input("Patient's Slope of Excersize (0,1 or 2)")
+    Number_of_vessels = st.text_input("Number of vessels (0, 1,2,3 or 4)")
+    Thalassemia = st.text_input("Thalassemia (1,2,3 or 4)")
+    
     
     ## Numeric conversion
     # Convert inputs to numeric using pd.to_numeric or float conversion
@@ -73,14 +82,22 @@ def main():
     sex = pd.to_numeric(sex, errors='coerce')
     Chest_Pain = pd.to_numeric(Chest_Pain, errors='coerce')
     Blood_Pressure = pd.to_numeric(Blood_Pressure, errors='coerce')
-
+    cholestoral = pd.to_numeric(cholestoral, errors='coerce')
+    Fasting_Blood_Sugar = pd.to_numeric(Fasting_Blood_Sugar, errors='coerce')
+    electrocardiographic = pd.to_numeric(electrocardiographic, errors='coerce')
+    Maximum_Heart_Rate = pd.to_numeric(Maximum_Heart_Rate, errors='coerce')
+    Excersize_Includes = pd.to_numeric(Excersize_Includes, errors='coerce')
+    ST_Depression = pd.to_numeric(ST_Depression, errors='coerce')
+    Slope_of_Excersize = pd.to_numeric(Slope_of_Excersize, errors='coerce')
+    Number_of_vessels = pd.to_numeric(Number_of_vessels, errors='coerce')
+    Thalassemia = pd.to_numeric(Thalassemia, errors='coerce')
 
     # code for prediction
     diagnosis = '' # string tha ontaons null values whose values are stored in the prediction
     
     # creating  a prediction button
-    if st.button("Predict"):
-        diagnosis = hearth_disease_prediction([age, sex, Chest_Pain, Blood_Pressure])
+    if st.button("PREDICT"):
+        diagnosis = hearth_disease_prediction([age,sex,Chest_Pain,Blood_Pressure,cholestoral,Fasting_Blood_Sugar, electrocardiographic,Maximum_Heart_Rate,Excersize_Includes,ST_Depression,Slope_of_Excersize,Number_of_vessels,Thalassemia])
     st.success(diagnosis)
     
  
