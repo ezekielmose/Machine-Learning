@@ -4,13 +4,34 @@ import numpy as np
 import pickle # to load the model
 import streamlit as st
 import pandas as pd
+import requests
 
 
 # Loading the saved model copy the loaded_model line of code from jupyter notebook
 # copy the path to where the loaded model is savel
 # change the \ to /
 #loaded_model = pickle.load(open('E:\Ezekiel\Model_Deployment/trained_model1.sav', 'rb'))
-loaded_model = pickle.load(open('https://github.com/ezekielmose/Machine-Learning/blob/main/trained_model1.sav', 'rb')) 
+#loaded_model = pickle.load(open('https://github.com/ezekielmose/Machine-Learning/blob/main/trained_model1.sav', 'rb')) 
+
+#import pickle
+
+
+# URL of the .sav file
+url = 'https://github.com/ezekielmose/Machine-Learning/raw/main/trained_model1.sav'
+
+# Download the file
+loaded_model = requests.get(url)
+
+# Save the downloaded content to a temporary file
+with open('trained_model1.sav', 'wb') as f:
+    f.write(loaded_model.content)
+
+# Load the saved model
+with open('trained_model1.sav', 'rb') as f:
+    loaded_model = pickle.load(f)
+
+# Now, you can use the loaded model for predictions
+
 
 # creating a function for prediction
 def hearth_disease_prediction(input_data):
