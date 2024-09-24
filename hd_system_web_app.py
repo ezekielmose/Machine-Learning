@@ -9,8 +9,8 @@ import pandas as pd
 # Loading the saved model copy the loaded_model line of code from jupyter notebook
 # copy the path to where the loaded model is savel
 # change the \ to /
-loaded_model = pickle.load(open('E:\Ezekiel\Model_Deployment/trained_model1.sav', 'rb'))
-
+#loaded_model = pickle.load(open('E:\Ezekiel\Model_Deployment/trained_model1.sav', 'rb'))
+loaded_model = pickle.load(open('https://github.com/ezekielmose/Machine-Learning/blob/main/trained_model1.sav', 'rb')) 
 
 # creating a function for prediction
 def hearth_disease_prediction(input_data):
