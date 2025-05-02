@@ -64,7 +64,7 @@ def main():
     age = st.text_input("Enter the Patient's Age 15 - 80")
     #sex = st.text_input("Enter the Patient's Gender (0 [F] or 1[M])")
 
-    
+    # DROPDOWN DRROP BOX
     sex = st.selectbox( "What is the Gender", options=["Female", "Male"] )
     # Map the selected gender string to numeric value if needed
     gender_value = 0 if sex == "Female" else 1
