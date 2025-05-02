@@ -81,6 +81,12 @@ def main():
     Slope_of_Excersize	 = st.text_input("Patient's Slope of Excersize (0,1 or 2)")
     Number_of_vessels = st.text_input("Number of vessels (0, 1,2,3 or 4)")
     Thalassemia = st.text_input("Thalassemia (1,2,3 or 4)")
+
+     Thalassemia = st.number_input( "Thalassemia Level", 
+        min_value=0, 
+        max_value=3, 
+        step=1
+    )
     
     
     ## Numeric conversion
