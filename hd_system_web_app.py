@@ -104,7 +104,7 @@ def main():
     
     # creating  a prediction button
     if st.button("PREDICT"):
-        diagnosis = hearth_disease_prediction([age,sex,Chest_Pain,Blood_Pressure,cholestoral,Fasting_Blood_Sugar, resting_electrocardiographic,Maximum_Heart_Rate,Excersize_Includes,ST_Depression,Slope_of_Excersize,Number_of_vessels,Thalassemia])
+        diagnosis = hearth_disease_prediction([age,gender_value,Chest_Pain,Blood_Pressure,cholestoral,Fasting_Blood_Sugar, resting_electrocardiographic,Maximum_Heart_Rate,Excersize_Includes,ST_Depression,Slope_of_Excersize,Number_of_vessels,Thalassemia])
     st.success(diagnosis)
     
  
