@@ -17,7 +17,7 @@ import requests
 
 
 # URL of the .sav file
-url = 'https://github.com/ezekielmose/Machine-Learning/raw/main/trained_model1.sav'
+url = 'https://raw.githubusercontent.com/ezekielmose/Machine-Learning/refs/heads/main/naive_model_trained.sav'
 
 # Download the file
 loaded_model = requests.get(url)
