@@ -83,8 +83,8 @@ def main():
 
     # INCREMENT/DECREAMENT OPTIONS
     Thalassemia = st.number_input( "Thalassemia Level", 
-        min_value=0, 
-        max_value=3, 
+        min_value=1, 
+        max_value=4, 
         step=1
     )
     
