@@ -67,7 +67,7 @@ def main():
     
     sex = st.selectbox( "What is the Gender", options=["Female", "Male"] )
     # Map the selected gender string to numeric value if needed
-    gender_value = 0 if gender == "Female" else 1
+    gender_value = 0 if sex == "Female" else 1
 
     
     Chest_Pain = st.text_input("Chest Pain level (0,1,2 or 3)")
