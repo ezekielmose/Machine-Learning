@@ -62,7 +62,7 @@ def main():
     
     #getting the input data from the user  
     age = st.text_input("Enter the Patient's Age 15 - 80")
-    sex = st.text_input("Enter the Patient's Gender (0 [F] or 1[M])")
+    #sex = st.text_input("Enter the Patient's Gender (0 [F] or 1[M])")
 
     
     sex = st.selectbox( "What is the Gender", options=["Female", "Male"] )
