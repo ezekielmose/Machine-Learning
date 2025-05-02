@@ -63,6 +63,13 @@ def main():
     #getting the input data from the user  
     age = st.text_input("Enter the Patient's Age 15 - 80")
     sex = st.text_input("Enter the Patient's Gender (0 [F] or 1[M])")
+
+    
+    sex = st.selectbox( "What is the Gender", options=["Female", "Male"] )
+    # Map the selected gender string to numeric value if needed
+    gender_value = 0 if gender == "Female" else 1
+
+    
     Chest_Pain = st.text_input("Chest Pain level (0,1,2 or 3)")
     Blood_Pressure= st.text_input("The Blood Pressure(mm Hg)level (94-200) ")
     cholestoral = st.text_input("Cholestoral Level (mg/dl) (131 -290)")
