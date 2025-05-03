@@ -43,7 +43,7 @@ def hearth_disease_prediction(input_data):
     
     # Prepare the input data as an array or DataFrame (depending on your model)
     # input_data = [age, sex, Chest_Pain, Blood_Pressure]
-    input_data_reshaped = np.array(input_data).reshape(1, -1)
+    input_data_reshaped = input_data_as_numpy_array.reshape(1, -1)
 
 
    #  input_data_reshaped = input_data_as_numpy_array.reshape(1, -1)
