@@ -50,7 +50,7 @@ def hearth_disease_prediction(input_data):
     prediction = loaded_model1.predict(input_data_reshaped)
     
     # print(prediction)
-    if prediction [1] == 1:
+    if prediction [0] == 0:
         return "The Person has Heart Disease" # insted of print change to return
     else:
         return "The Person Does not have a Heart Disease" # insted of print change to return  
