@@ -48,7 +48,7 @@ def hearth_disease_prediction(input_data):
    #  input_data_reshaped = input_data_as_numpy_array.reshape(1, -1)
     prediction = loaded_model.predict(input_data_reshaped)
     
-    print(prediction)
+    # print(prediction)
     if prediction [0] == 0:
         return "The Person has Heart Disease" # insted of print change to return
     else:
