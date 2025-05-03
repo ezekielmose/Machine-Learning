@@ -20,15 +20,15 @@ import requests
 url = 'https://raw.githubusercontent.com/ezekielmose/Machine-Learning/refs/heads/main/hd_trained_model.sav'
 
 # Download the file
-loaded_model = requests.get(url)
+loaded_model1 = requests.get(url)
 
 # Save the downloaded content to a temporary file
 with open('hd_trained_model.sav', 'wb') as f:
-    f.write(loaded_model.content)
+    f.write(loaded_model1.content)
 
 # Load the saved model
 with open('hd_trained_model.sav', 'rb') as f:
-    loaded_model = pickle.load(f)
+    loaded_model1 = pickle.load(f)
 
 # Now, you can use the loaded model for predictions
 
@@ -47,7 +47,7 @@ def hearth_disease_prediction(input_data):
 
 
    #  input_data_reshaped = input_data_as_numpy_array.reshape(1, -1)
-    prediction = loaded_model.predict(input_data_reshaped)
+    prediction = loaded_model1.predict(input_data_reshaped)
     
     # print(prediction)
     if prediction [0] == 0:
