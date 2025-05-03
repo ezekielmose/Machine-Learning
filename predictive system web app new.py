@@ -47,11 +47,6 @@ def main():
     Number_of_vessels = st.text_input("Number of vessels (0, 1,2,3 or 4)")
     Thalassemia = st.text_input("Thalassemia (0, 1,2,3 or 4)")
 
-
-    if st.button("PREDICT"):
-        diagnosis = hearth_disease_prediction(])
-    st.success(diagnosis)
-
     
     if st.button('CLICK HERE TO PREDICT'):
         makeprediction = model.predict([[age,gender_value,Chest_Pain,Blood_Pressure,cholestoral,Fasting_Blood_Sugar, resting_electrocardiographic,Maximum_Heart_Rate,Excersize_Includes,ST_Depression,Slope_of_Excersize,Number_of_vessels,Thalassemia]])
