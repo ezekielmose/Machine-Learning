@@ -5,9 +5,7 @@ import pickle # to load the model
 import streamlit as st
 import pandas as pd
 import requests
-from sklearn.preprocessing import StandardScaler
 
-scaler = StandardScaler ()
 
 # Loading the saved model copy the loaded_model line of code from jupyter notebook
 # copy the path to where the loaded model is savel
