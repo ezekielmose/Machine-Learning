@@ -46,10 +46,8 @@ def hearth_disease_prediction(input_data):
     input_data_reshaped = np.array(input_data).reshape(1, -1)
 
 
-    std_data=scaler.transform(input_data_reshaped)
-
    #  input_data_reshaped = input_data_as_numpy_array.reshape(1, -1)
-    prediction = loaded_model.predict(std_data)
+    prediction = loaded_model.predict(input_data_reshaped)
     
     # print(prediction)
     if prediction [0] == 0:
