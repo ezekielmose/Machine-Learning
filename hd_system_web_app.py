@@ -50,9 +50,9 @@ def hearth_disease_prediction(input_data):
     
     print(prediction)
     if prediction [0] == 0:
-        return "The Person Does not have a Heart Disease" # insted of print change to return
+        return "The Person has Heart Disease" # insted of print change to return
     else:
-        return "The Person has Heart Disease" # insted of print change to return  
+        return "The Person Does not have a Heart Disease" # insted of print change to return  
     
 # Streamlit library to craete a user interface
 def main():
