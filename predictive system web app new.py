@@ -47,6 +47,23 @@ def main():
     Number_of_vessels = st.text_input("Number of vessels (0, 1,2,3 or 4)")
     Thalassemia = st.text_input("Thalassemia (0, 1,2,3 or 4)")
 
+    ## Numeric conversion
+    # Convert inputs to numeric using pd.to_numeric or float conversion
+    age = pd.to_numeric(age, errors='coerce')
+    sex = pd.to_numeric(sex, errors='coerce')
+    Chest_Pain = pd.to_numeric(Chest_Pain, errors='coerce')
+    Blood_Pressure = pd.to_numeric(Blood_Pressure, errors='coerce')
+    cholestoral = pd.to_numeric(cholestoral, errors='coerce')
+    Fasting_Blood_Sugar = pd.to_numeric(Fasting_Blood_Sugar, errors='coerce')
+    resting_electrocardiographic = pd.to_numeric(resting_electrocardiographic, errors='coerce')
+    Maximum_Heart_Rate = pd.to_numeric(Maximum_Heart_Rate, errors='coerce')
+    Excersize_Includes = pd.to_numeric(Excersize_Includes, errors='coerce')
+    ST_Depression = pd.to_numeric(ST_Depression, errors='coerce')
+    Slope_of_Excersize = pd.to_numeric(Slope_of_Excersize, errors='coerce')
+    Number_of_vessels = pd.to_numeric(Number_of_vessels, errors='coerce')
+    Thalassemia = pd.to_numeric(Thalassemia, errors='coerce')
+
+
     
     if st.button('CLICK HERE TO PREDICT'):
         makeprediction = model.predict([[age,gender_value,Chest_Pain,Blood_Pressure,cholestoral,Fasting_Blood_Sugar, resting_electrocardiographic,Maximum_Heart_Rate,Excersize_Includes,ST_Depression,Slope_of_Excersize,Number_of_vessels,Thalassemia]])
