@@ -17,17 +17,17 @@ import requests
 
 
 # URL of the .sav file
-url = 'https://raw.githubusercontent.com/ezekielmose/Machine-Learning/refs/heads/main/model_trained01.pkl'
+url = 'https://raw.githubusercontent.com/ezekielmose/Machine-Learning/refs/heads/main/hd_trained_model.sav'
 
 # Download the file
 loaded_model = requests.get(url)
 
 # Save the downloaded content to a temporary file
-with open('model_trained01.pkl', 'wb') as f:
+with open('hd_trained_model.sav', 'wb') as f:
     f.write(loaded_model.content)
 
 # Load the saved model
-with open('model_trained01.pkl', 'rb') as f:
+with open('hd_trained_model.sav', 'rb') as f:
     loaded_model = pickle.load(f)
 
 # Now, you can use the loaded model for predictions
