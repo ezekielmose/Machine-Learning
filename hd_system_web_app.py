@@ -86,8 +86,7 @@ def main():
     Thalassemia = st.number_input( "Thalassemia Level", 
         min_value=1, 
         max_value=4, 
-        step=2
-    )
+step=2)
     
     
     ## Numeric conversion
