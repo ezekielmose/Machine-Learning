@@ -81,13 +81,13 @@ def main():
     ST_Depression = st.text_input("Patient's ST Depression [ECG or EKG] (0.0 - 4.4)")
     Slope_of_Excersize	 = st.text_input("Patient's Slope of Excersize (0,1 or 2)")
     Number_of_vessels = st.text_input("Number of vessels (0, 1,2,3 or 4)")
-    Thalassemia = st.text_input("Thalassemia (0, 1,2,3 or 4)")
-    # INCREMENT/DECREAMENT OPTIONS
-   #3 Thalassemia = st.number_input( "Thalassemia Level", 
-     #   min_value=1, 
-      #  max_value=4, 
-       # step=2
-    #)
+    #Thalassemia = st.text_input("Thalassemia (0, 1,2,3 or 4)")
+    #INCREMENT/DECREAMENT OPTIONS
+    Thalassemia = st.number_input( "Thalassemia Level", 
+        min_value=1, 
+        max_value=4, 
+        step=2
+    )
     
     
     ## Numeric conversion
